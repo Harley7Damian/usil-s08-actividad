@@ -175,7 +175,7 @@ if reset_chat:
     st.session_state.historial = []
 
 col1, col2, col3 = st.columns([2, 1, 1])
-col1.metric("Corpus", "Películas")
+col1.metric("Corpus", "Interstellar")
 col2.metric("Modelo", "Gemini 2.5")
 col3.metric("Mensajes", len(st.session_state.historial))
 
@@ -188,7 +188,7 @@ for msg in st.session_state.historial:
     else:
         st.chat_message("assistant").write(msg["texto"])
 
-pregunta = st.chat_input("¿Qué quieres saber sobre películas?")
+pregunta = st.chat_input("¿Qué quieres saber sobre Interstellar?")
 
 if pregunta:
     st.session_state.historial.append({"rol": "usuario", "texto": pregunta})
